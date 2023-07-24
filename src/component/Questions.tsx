@@ -4,7 +4,7 @@ import { IAnswer, Iprops } from '../types/type';
 import Table from './Table';
 const Questions = () => {
   const [allData, setAllData] = useState<Iprops[]>([]);
-  const [time, setTime] = useState(5);
+  const [time, setTime] = useState(30);
   const [index, setIndex] = useState(0);
   const [tenData, setTenData] = useState(10);
   const [disableds, setDisableds] = useState(false);
@@ -40,7 +40,7 @@ const Questions = () => {
   }, [time]);
 
   useEffect(() => {
-    if (time === 3) {
+    if (time === 20) {
       setDisableds(true);
     }
     if (time === 0) {
@@ -48,7 +48,7 @@ const Questions = () => {
       setTenData(tenData + 10);
       setCheckedValuesData((prevArray) => [...prevArray, checkedValues]);
       setSelectedOption('');
-      setTime(5);
+      setTime(30);
       setCheckedValues({
         id: 0,
         title: '',
